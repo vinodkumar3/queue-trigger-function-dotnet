@@ -8,7 +8,7 @@ namespace Company.Function
     public static class QueueTriggerCSharp
     {
         [FunctionName("QueueTriggerCSharp")]
-        public static void Run([QueueTrigger("myqueue-items", Connection = "kuvfndotnetapp8764_STORAGE")]string myQueueItem, ILogger log)
+        public static void Run([QueueTrigger("myqueue-items", Connection = "AzureWebJobsStorage")]string myQueueItem, ILogger log)
         {
             log.LogInformation($"C# Queue trigger function processed: {myQueueItem}");
         }
